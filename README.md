@@ -6,11 +6,10 @@ A training project for The Odin project boot camp
   
   1. Site Skeleton
   2. Display read books
-  3. Add new Books
-  4. Remove Books
-  5. Update Books 
+  3. Remove Books
+  4. Update Books 
 
 
 ## Features Added
-  
+  1.Modal for adding new Books
 
