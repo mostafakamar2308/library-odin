@@ -16,7 +16,7 @@
           <h1>Knowledge</h1>
         </a>
         <div class="btns">
-          <button class="add-new-btn">
+          <button class="add-new-btn-nav">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -75,9 +75,22 @@
             </p>
           </article>
         </div>
-        <button class="add-new-btn">Add New Book</button>
+        <button class="add-new-btn-body">Add New Book</button>
       </section>
-      <section id="add-new-book"></section>
+      <section id="add-new-book">
+        <form action="">
+          <span class="close">X</span>
+          <label for="name">Book Name</label>
+          <input type="text" id="name" name="bookName" />
+          <label for="author">Written by</label>
+          <input type="text" name="author" id="author" />
+          <label for="num">Number of pages</label>
+          <input type="text" name="num" id="num" />
+          <label for="completed">Completed?</label>
+          <input type="checkbox" name="completed" id="completed" />
+          <input type="submit" value="Add Your new Book" />
+        </form>
+      </section>
     </main>
     <footer>
       <p>Made by <span>Mostafa Kamar</span> &copy;2021</p>
@@ -103,5 +116,6 @@
         </ul>
       </div>
     </footer>
+    <script src="index.js"></script>
   </body>
 </html>
