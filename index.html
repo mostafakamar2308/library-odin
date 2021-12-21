@@ -33,62 +33,21 @@
     <main>
       <section id="book-container">
         <h3>Your Library</h3>
-        <div class="books">
-          <article class="Al-quran">
-            <h4>Al Quran Al Kareem</h4>
-            <h5>from Allah</h5>
-            <p>Number of pages: <span class="number">614</span></p>
-            <p>
-              Completed
-              <span
-                class="completed"
-                style="
-                  font-weight: bolder;
-                  font-size: 1.2em;
-                  color: white;
-                  margin-left: 20px;
-                  cursor: pointer;
-                "
-              >
-                &#10003;</span
-              >
-            </p>
-          </article>
-          <article class="harry-botter">
-            <h4>Harry Botter</h4>
-            <h5>by IDK</h5>
-            <p>Number of pages: <span class="number">614</span></p>
-            <p>
-              Completed
-              <span
-                class="completed"
-                style="
-                  font-weight: bolder;
-                  font-size: 1.2em;
-                  color: white;
-                  margin-left: 20px;
-                  cursor: pointer;
-                "
-              >
-                &#10003;
-              </span>
-            </p>
-          </article>
-        </div>
+        <div class="books"></div>
         <button class="add-new-btn-body">Add New Book</button>
       </section>
       <section id="add-new-book">
-        <form action="">
+        <form id="book-form" action="">
           <span class="close">X</span>
           <label for="name">Book Name</label>
-          <input type="text" id="name" name="bookName" />
+          <input required type="text" id="name" name="bookName" />
           <label for="author">Written by</label>
-          <input type="text" name="author" id="author" />
+          <input type="text" required name="author" id="author" />
           <label for="num">Number of pages</label>
-          <input type="text" name="num" id="num" />
+          <input type="text" name="num" required id="num" />
           <label for="completed">Completed?</label>
           <input type="checkbox" name="completed" id="completed" />
-          <input type="submit" value="Add Your new Book" />
+          <input id="submit" type="submit" value="Add Your new Book" />
         </form>
       </section>
     </main>
