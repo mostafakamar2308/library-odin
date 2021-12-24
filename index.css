@@ -107,8 +107,17 @@ article {
   border-radius: 10px;
   padding: 2em 1em;
   color: var(--secondery-color);
+  position: relative;
 }
 
+.removeBook {
+  position: absolute;
+  top: 0.25rem;
+  right: 0.5rem;
+  color: hsl(0, 68%, 54%);
+  font-weight: bold;
+  cursor: pointer;
+}
 /*End of Library section*/
 /*Model Start*/
 #add-new-book {
@@ -122,6 +131,7 @@ article {
   display: none;
   transition: 0.3s;
 }
+
 form {
   padding: 2em 0;
   background-color: var(--tertiary-color);

@@ -54,14 +54,18 @@ submit.addEventListener("click", function (e) {
 
 /*Display the books in the DOM */
 function displayBooks(e) {
+  let i = 0;
   let article = document.createElement("article");
-  article.classList.add(`${e.bookName}`);
+  article.classList.add(`book-${i + 1}`);
   let name = document.createElement("h4");
   name.innerHTML = e.bookName;
   let author = document.createElement("h5");
   author.innerHTML = e.author;
   let pageNum = document.createElement("p");
   pageNum.innerHTML = `Number of pages: <span class="number">${e.pageNumber} </span>`;
+  let remove = document.createElement("span");
+  remove.innerHTML = `X`;
+  remove.classList.add("removeBook");
   let completed = document.createElement("p");
   completed.innerHTML = `Completed <span
   class="completed"
@@ -79,5 +83,26 @@ function displayBooks(e) {
   article.appendChild(author);
   article.appendChild(pageNum);
   article.appendChild(completed);
+  article.appendChild(remove);
   myLibrary.appendChild(article);
+  i++;
 }
+//remove elements from the Dom and Database
+window.onclick = (e) => {
+  if (e.target.parentNode.tagName === "ARTICLE") {
+    let article = e.target.parentNode;
+    // e.target.parentElement.remove();
+    // console.log(myBooks);
+
+    let index = Array.from(article.parentNode.children).indexOf(
+      e.target.parentNode
+    );
+    console.log(index);
+    myBooks.splice(index, 1);
+    console.log(myBooks);
+    myLibrary.innerHTML = "";
+    for (let i = 0; i < myBooks.length; i++) {
+      displayBooks(myBooks[i]);
+    }
+  }
+};
